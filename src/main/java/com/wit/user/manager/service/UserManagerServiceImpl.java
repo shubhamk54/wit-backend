@@ -17,6 +17,6 @@ public class UserManagerServiceImpl implements UserManagerService {
 
     @Override
     public List<Product> getAllProducts() throws ApiException {
-        return null;
+        return userDao.getAllProducts();
     }
 }
