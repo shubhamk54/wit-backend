@@ -14,3 +14,7 @@ docker run -d -p 8080:8080 wit/service-product-mgr:latest
 mvn clean install 
 docker build -t uk.icr.io/dev-env/wit/service-product-mgr .
 docker push uk.icr.io/dev-env/wit/service-product-mgr:latest
+
+
+# deploy the app to cloud foundary
+cf push wit-backend-3 -o uk.icr.io/dev-env/wit/service-product-mgr:latest --docker-username shubham_kale
