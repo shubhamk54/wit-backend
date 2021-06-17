@@ -42,5 +42,11 @@ public class ProductManagementController {
         return new ResponseEntity<>(list, new HttpHeaders(), HttpStatus.OK);
     }
 
+    @GetMapping("/details/{category}")
+    public ResponseEntity<List<ProductDetails>> getProductsUsingCategory(@RequestParam String category) throws ApiException {
+        List<ProductDetails> list = userManagerservice.getProductsUsingCategory(category);
+        return new ResponseEntity<>(list, new HttpHeaders(), HttpStatus.OK);
+    }
+
 
 }

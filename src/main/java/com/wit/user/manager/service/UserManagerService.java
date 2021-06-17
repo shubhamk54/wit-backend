@@ -15,4 +15,6 @@ public interface UserManagerService {
     List<ProductDetails> getProductsUsingName(String name) throws ApiException;
 
     List<ProductDetails> getProductsUsingType(String type) throws ApiException;
+
+    List<ProductDetails> getProductsUsingCategory(String category) throws ApiException;
 }

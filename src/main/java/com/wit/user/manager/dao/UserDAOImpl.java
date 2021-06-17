@@ -19,7 +19,6 @@ public class UserDAOImpl extends CapitalDaoSupport implements UserDAO {
         super(datasource);
     }
 
-
     @Override
     public List<Product> getAllProducts() throws ApiException {
         return queryForList(UserDaoConstants.FETCH_PRODUCTS_QUERY, new ProductRowMapper());
@@ -29,12 +28,19 @@ public class UserDAOImpl extends CapitalDaoSupport implements UserDAO {
     public List<ProductDetails> getAllProductDetails() throws ApiException {
         return queryForList(UserDaoConstants.FETCH_ALL_PRODUCTDETAILS, new ProductDetailsRowMapper());
     }
+
     @Override
     public List<ProductDetails> getProductsUsingName(String productName) throws ApiException {
-        return queryForList(UserDaoConstants.FETCH_PRODUCTDETAILS_BYNAME, new ProductDetailsRowMapper());
+        return queryForParams(UserDaoConstants.FETCH_PRODUCTDETAILS_BYNAME,new Object[]{productName}, new ProductDetailsRowMapper());
     }
+
     @Override
     public List<ProductDetails> getProductsUsingType(String type) throws ApiException {
-        return queryForList(UserDaoConstants.FETCH_PRODUCTDETAILS_BYTYPE, new ProductDetailsRowMapper());
+        return queryForParams(UserDaoConstants.FETCH_PRODUCTDETAILS_BYTYPE,new Object[]{type}, new ProductDetailsRowMapper());
+    }
+
+    @Override
+    public List<ProductDetails> getProductsUsingCategory(String category) throws ApiException {
+        return queryForParams(UserDaoConstants.FETCH_PRODUCTDETAILS_BYCATEGORY,new Object[]{category}, new ProductDetailsRowMapper());
     }
 }

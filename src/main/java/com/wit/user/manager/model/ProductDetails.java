@@ -12,6 +12,7 @@ public class ProductDetails{
     public int quantity;
     public int productId;
     public String image;
-    public String type;
+    public String productType;
     public Boolean isWorking;
+    public String category;
 }

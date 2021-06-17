@@ -15,21 +15,33 @@ public class UserManagerServiceImpl implements UserManagerService {
     @Autowired
     UserDAO userDao;
 
-
     @Override
     public List<Product> getAllProducts() throws ApiException {
         return userDao.getAllProducts();
     }
+
     @Override
     public List<ProductDetails> getAllProductDetails() throws ApiException{
         return userDao.getAllProductDetails();
     }
+
     @Override
     public List<ProductDetails> getProductsUsingName(String productName) throws ApiException{
         return userDao.getProductsUsingName(productName);
     }
+
     @Override
     public List<ProductDetails> getProductsUsingType(String type) throws ApiException{
         return userDao.getProductsUsingType(type);
     }
+
+    @Override
+    public List<ProductDetails> getProductsUsingCategory(String category) throws ApiException{
+        return userDao.getProductsUsingType(category);
+    }
+
+//    @Override
+//    public List<ProductDetails> getDonarProductMapping(String userId, String productId) throws ApiException{
+//        return userDao.getProductsUsingType(category);
+//    }
 }

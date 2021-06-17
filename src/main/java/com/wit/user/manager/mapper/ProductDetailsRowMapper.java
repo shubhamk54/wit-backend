@@ -1,5 +1,6 @@
 package com.wit.user.manager.mapper;
 
+        import com.wit.user.manager.model.Product;
         import com.wit.user.manager.model.ProductDetails;
         import org.springframework.jdbc.core.RowMapper;
 
@@ -14,13 +15,14 @@ public class ProductDetailsRowMapper implements RowMapper<ProductDetails> {
 
         product.setProductId(rs.getInt("productId"));
         product.setProductName(rs.getString("productName"));
-        product.setType(rs.getString("type"));
+        product.setProductType(rs.getString("type"));
 
         product.setExpiryDate(rs.getDate("expiryDate"));
         product.setManufacturerName(rs.getString("manufacturerName"));
         product.setQuantity(rs.getInt("quantity"));
         product.setImage(rs.getString("image"));
         product.setIsWorking(rs.getBoolean("isWorking"));
+        product.setCategory(rs.getString("category"));
         return product;
     }
 }
