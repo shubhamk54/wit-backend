@@ -1,6 +1,7 @@
 package com.wit.user.manager.service;
 
 import com.wit.user.manager.exception.ApiException;
+import com.wit.user.manager.model.DonarProductMapping;
 import com.wit.user.manager.model.Product;
 import com.wit.user.manager.model.ProductDetails;
 
@@ -17,4 +18,6 @@ public interface UserManagerService {
     List<ProductDetails> getProductsUsingType(String type) throws ApiException;
 
     List<ProductDetails> getProductsUsingCategory(String category) throws ApiException;
+
+    List<DonarProductMapping> getUserProductMapping(String userId, String productId)throws ApiException;
 }

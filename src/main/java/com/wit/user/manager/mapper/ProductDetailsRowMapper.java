@@ -21,7 +21,7 @@ public class ProductDetailsRowMapper implements RowMapper<ProductDetails> {
         product.setManufacturerName(rs.getString("maf_name"));
         product.setQuantity(rs.getInt("quantity"));
         product.setImage(rs.getString("image"));
-        product.setIsWorking(rs.getBoolean("is_working"));
+        product.setIsWorking(rs.getInt("is_working"));
         product.setCategory(rs.getString("category"));
         return product;
     }
