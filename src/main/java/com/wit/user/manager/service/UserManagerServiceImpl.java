@@ -42,8 +42,8 @@ public class UserManagerServiceImpl implements UserManagerService {
     }
 
     @Override
-    public Boolean saveProduct(ProductDetails product) {
-        return userDao.saveProduct(product);
+    public Boolean saveProductUser(DonarProductMapping productUser) throws ApiException{
+        return userDao.saveProductUser(productUser);
     }
 
 //    @Override

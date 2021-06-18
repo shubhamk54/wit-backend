@@ -26,3 +26,4 @@ public class ProductDetailsRowMapper implements RowMapper<ProductDetails> {
         return product;
     }
 }
+

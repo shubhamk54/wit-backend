@@ -19,6 +19,6 @@ public interface UserManagerService {
 
     List<ProductDetails> getProductsUsingCategory(String category) throws ApiException;
 
-    Boolean saveProduct(ProductDetails product);
+    Boolean saveProductUser(DonarProductMapping productUser) throws ApiException;
     List<DonarProductMapping> getUserProductMapping(String userId, String productId)throws ApiException;
 }

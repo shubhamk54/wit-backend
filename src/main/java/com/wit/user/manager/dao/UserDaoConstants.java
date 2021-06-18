@@ -13,7 +13,7 @@ public class UserDaoConstants {
     public static final String FETCH_PRODUCTDETAILS_BYCATEGORY="SELECT product_name,expiry_date,manf_name,quantity,product_id,image,type,is_working,category FROM product WHERE category=?";
 
     public static final String CREATE_NEW_USER = "INSERT INTO user_detail(first_name, last_name, email, phone_number,street_address, city, state,zip_code, country) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    public static final String CREATE_NEW_PRODUCT = "INSERT INTO product(product_name, expiry_date, manf_name, quantity, type) VALUES(?, ?, ?, ?, ?)";
+    public static final String CREATE_NEW_PRODUCT = "INSERT INTO product(product_name, expiry_date, manf_name, quantity, type,category) VALUES(?, ?, ?, ?, ?, ?)";
 
     public static final String FETCH_USER_BY_USERID="SELECT user_id FROM user_detail WHERE first_name=? AND last_name=?";
     public static final String FETCH_PRODUCT_BY_PRODUCTID="SELECT product_id FROM product WHERE product_name=? AND manf_name=?";
