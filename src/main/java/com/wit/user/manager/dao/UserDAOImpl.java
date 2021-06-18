@@ -1,8 +1,10 @@
 package com.wit.user.manager.dao;
 
 import com.wit.user.manager.exception.ApiException;
+import com.wit.user.manager.mapper.DonarProductMapper;
 import com.wit.user.manager.mapper.ProductDetailsRowMapper;
 import com.wit.user.manager.mapper.ProductRowMapper;
+import com.wit.user.manager.model.DonarProductMapping;
 import com.wit.user.manager.model.Product;
 import com.wit.user.manager.model.ProductDetails;
 import org.springframework.stereotype.Repository;
@@ -50,4 +52,10 @@ public class UserDAOImpl extends CapitalDaoSupport implements UserDAO {
         // @TODO: Added query
         return null;
     }
+
+    @Override
+    public List<DonarProductMapping> getUserProductMapping(String userId, String productId) throws ApiException {
+        return queryForParams(UserDaoConstants.FETCH_USER_PRODUCT_BYID,new Object[]{userId, productId}, new DonarProductMapper());
+    }
+
 }

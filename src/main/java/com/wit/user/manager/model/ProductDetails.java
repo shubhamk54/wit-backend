@@ -13,6 +13,6 @@ public class ProductDetails{
     public int productId;
     public String image;
     public String productType;
-    public Boolean isWorking;
+    public int isWorking;
     public String category;
 }

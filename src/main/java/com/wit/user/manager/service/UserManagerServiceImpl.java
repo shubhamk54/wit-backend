@@ -2,6 +2,7 @@ package com.wit.user.manager.service;
 
 import com.wit.user.manager.dao.UserDAO;
 import com.wit.user.manager.exception.ApiException;
+import com.wit.user.manager.model.DonarProductMapping;
 import com.wit.user.manager.model.Product;
 import com.wit.user.manager.model.ProductDetails;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,4 +50,10 @@ public class UserManagerServiceImpl implements UserManagerService {
 //    public List<ProductDetails> getDonarProductMapping(String userId, String productId) throws ApiException{
 //        return userDao.getProductsUsingType(category);
 //    }
+
+    @Override
+    public List<DonarProductMapping> getUserProductMapping(String userId, String productId) throws ApiException
+    {
+        return userDao.getUserProductMapping(userId, productId);
+    }
 }
