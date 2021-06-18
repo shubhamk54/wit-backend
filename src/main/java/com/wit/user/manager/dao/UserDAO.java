@@ -16,4 +16,6 @@ public interface UserDAO {
     List<ProductDetails> getProductsUsingType(String type) throws ApiException;
 
     List<ProductDetails> getProductsUsingCategory(String category) throws ApiException;
+
+    Boolean saveProduct(ProductDetails product);
 }

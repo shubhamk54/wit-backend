@@ -43,4 +43,11 @@ public class UserDAOImpl extends CapitalDaoSupport implements UserDAO {
     public List<ProductDetails> getProductsUsingCategory(String category) throws ApiException {
         return queryForParams(UserDaoConstants.FETCH_PRODUCTDETAILS_BYCATEGORY,new Object[]{category}, new ProductDetailsRowMapper());
     }
+
+    @Override
+    public Boolean saveProduct(ProductDetails product) {
+        //insert(UserDaoConstants.INSERT_PRODUCT_QUERY,new Object[]{product});
+        // @TODO: Added query
+        return null;
+    }
 }

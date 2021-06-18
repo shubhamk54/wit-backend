@@ -40,6 +40,11 @@ public class UserManagerServiceImpl implements UserManagerService {
         return userDao.getProductsUsingType(category);
     }
 
+    @Override
+    public Boolean saveProduct(ProductDetails product) {
+        return userDao.saveProduct(product);
+    }
+
 //    @Override
 //    public List<ProductDetails> getDonarProductMapping(String userId, String productId) throws ApiException{
 //        return userDao.getProductsUsingType(category);

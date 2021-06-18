@@ -49,4 +49,8 @@ public class ProductManagementController {
     }
 
 
+    @PostMapping("/save/product")
+    public ResponseEntity<Boolean> saveProduct( @RequestBody ProductDetails product ){
+        return new ResponseEntity<Boolean>(userManagerservice.saveProduct(product), new HttpHeaders(), HttpStatus.OK);
+    }
 }
